@@ -8,7 +8,7 @@ function Navbar() {
   console.log(user);
 
   return (
-    <div>
+    <>
       <section id="navbar" className="top-0 bg-[white]">
         <nav className="shadow-md shadow-[#5E50A1] flex md:justify-between h-[90px] py-[20px] px-[100px]">
           <div>
@@ -53,7 +53,7 @@ function Navbar() {
           </div>
         </nav>
       </section>
-    </div>
+    </>
   );
 }
 

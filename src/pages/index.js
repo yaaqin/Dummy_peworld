@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Navbar from "./Component/navbar";
 
 export default function Home() {
   return (
     <main>
+      <Navbar/>
       <section
         id="content-1"
         className="py-[70px] container mx-auto px-[100px] grid grid-cols-2"
