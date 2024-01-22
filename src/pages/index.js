@@ -1,11 +1,8 @@
-import Navbar from "./Component/navbar";
-import Footer from "./Component/footer";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <section
         id="content-1"
         className="py-[70px] container mx-auto px-[100px] grid grid-cols-2"
@@ -106,7 +103,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }
