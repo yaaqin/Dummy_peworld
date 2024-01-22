@@ -1,8 +1,11 @@
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <>
+    <Navbar/>
       <section
         id="content-1"
         className="py-[70px] container mx-auto px-[100px] grid grid-cols-2"
@@ -16,7 +19,7 @@ export default function Home() {
             Profesional di Ujung Jari!
           </p>
           <div className="mx-auto md:mx-[0]">
-            <Link href={"/talent-list"}>
+            <Link href={"/talent_list"}>
               <button className="hover:scale-[1.03] bg-[#5E50A1] border-[2px] px-[15px] rounded-md py-[5px] border-[#5E50A1] text-[white]">
                 Mulai Dari Sekarang
               </button>
@@ -103,7 +106,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+      <Footer/>
+    </>
   );
 }
 
