@@ -117,7 +117,7 @@ export default function Talent_list(props) {
 }
 
 export async function getServerSideProps() {
-  const req = await axios.get("http://localhost:3000/api/dataTalent");
+  const req = await axios.get("https://dummy-peworld.vercel.app/api/dataTalent");
   return {
     props: req.data,
   };
