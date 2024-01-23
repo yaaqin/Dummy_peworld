@@ -7,6 +7,7 @@ import { list } from "postcss";
 import next from "next";
 
 export default function Talent_list(props) {
+    console.log(props)
   const alldata = React.useState(props?.Data.length / 4);
   const data = Math.ceil(parseFloat(alldata));
 
@@ -116,7 +117,7 @@ export default function Talent_list(props) {
 }
 
 export async function getServerSideProps() {
-  const req = await axios.get("http://localhost:3000/api/list-talent");
+  const req = await axios.get("http://localhost:3000/api/dataTalent");
   return {
     props: req.data,
   };
