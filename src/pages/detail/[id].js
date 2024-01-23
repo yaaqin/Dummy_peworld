@@ -90,7 +90,7 @@ export async function getServerSideProps(props) {
 
   console.log(id);
 
-  const req = await axios.get(`http://localhost:3000/api/dataTalent?id=${id}`);
+  const req = await axios.get(`https://dummy-peworld.vercel.app/api/dataTalent?id=${id}`);
   return {
     props: req.data,
   };
