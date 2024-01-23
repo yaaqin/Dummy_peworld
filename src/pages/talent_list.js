@@ -101,7 +101,7 @@ export default function Talent_list(props) {
                     : "text-[black] bg-[white]"
                 }`}
               >
-                <span>{increment}</span>
+                <span>{increment} <p className="hidden">{item}</p></span>
               </button>
             );
           })}
