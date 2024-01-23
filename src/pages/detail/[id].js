@@ -91,6 +91,7 @@ export async function getServerSideProps(props) {
   console.log(id);
 
   const req = await axios.get(`https://dummy-peworld.vercel.app/api/dataTalent?id=${id}`);
+  console.log(req);
   return {
     props: req.data,
   };
