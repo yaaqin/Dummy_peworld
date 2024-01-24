@@ -10,6 +10,7 @@ function Detail(props) {
 
   const router = useRouter();
   const { Data } = props;
+  console.log(`ini adalah data yang dikirmkan ${Data}`);
   return (
     <div>
         <div className="z-50 shadow-md shadow-[#5E50A1]">
