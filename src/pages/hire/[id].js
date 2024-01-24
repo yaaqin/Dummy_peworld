@@ -5,7 +5,7 @@ import axios from "axios";
 import Link from "next/link";
 import { getCookie } from "cookies-next";
 
-function Hiring(props) {
+function Hire(props) {
   const { Data } = props;
 
   const token = getCookie("token")
@@ -127,11 +127,11 @@ function Hiring(props) {
   );
 }
 
-export async function getServerSideProps({ request, res, params }) {
-  const { id } = params;
+// export async function getServerSideProps({ request, res, params }) {
+//   const { id } = params;
 
-  const user = getCookie("user", { request, res });
-  const token = getCookie("token", { request, res });
+//   const user = getCookie("user", { request, res });
+//   const token = getCookie("token", { request, res });
 
   // if (user && token) {
   //     return {
@@ -143,10 +143,10 @@ export async function getServerSideProps({ request, res, params }) {
   // }
     
   
-  const req = await axios.get(`https://dummy-peworld.vercel.app/api/list-talent?id=${id}`);
-  return {
-    props: req.data,
-  };
-}
+//   const req = await axios.get(`https://dummy-peworld.vercel.app/api/list-talent?id=${id}`);
+//   return {
+//     props: req.data,
+//   };
+// }
 
-export default Hiring;
+export default Hire;
