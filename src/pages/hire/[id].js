@@ -17,21 +17,21 @@ function Hiring(props) {
   const [isoading, setisoading] = React.useState(false);
 
   const handleSend = () => {
-    setisoading(true)
+    // setisoading(true)
 
-    axios.post("https://hire-job.onrender.com/v1/contact", {
-      subject: subject,
-      description: desk,
-      sender: fullname,
-      toName: Data?.fullname,
-      to: Data?.socmed?.email,
-    }, {headers: {Authorization: `Bearer ${token}`}}).then((resullt) => {
-      setSuccessMsg("Email success sended to user")
-    } ).catch((err)=> {
-      console.log(err)
-    }).finally(() => {
-      setisoading(false)
-    });
+    // axios.post("https://hire-job.onrender.com/v1/contact", {
+    //   subject: subject,
+    //   description: desk,
+    //   sender: fullname,
+    //   toName: Data?.fullname,
+    //   to: Data?.socmed?.email,
+    // }, {headers: {Authorization: `Bearer ${token}`}}).then((resullt) => {
+    //   setSuccessMsg("Email success sended to user")
+    // } ).catch((err)=> {
+    //   console.log(err)
+    // }).finally(() => {
+    //   setisoading(false)
+    // });
   };
   return (
     <div>
