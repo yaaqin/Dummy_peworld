@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import CardTalent from "@/components/card_talent";
@@ -7,20 +8,15 @@ import { list } from "postcss";
 import next from "next";
 
 export default function Talent_list(props) {
-    console.log(props)
+  console.log(props);
   const alldata = React.useState(props?.Data.length / 4);
   const data = Math.ceil(parseFloat(alldata));
 
-  //   const [listData, setListData] = React.useState(props?.Data?.slice(0, 4));
   const [currentPages, setCurrentPages] = React.useState(
     props?.Data?.slice(0, 4)
   );
 
   const [pageNumber, setpageNumber] = React.useState(1);
-
-//   const handleBack = () => {
-//     setpageNumber(nextPages--)
-//   }
 
   const handlePagination = (nextPages) => {
     setCurrentPages(props?.Data?.slice(4 * (nextPages - 1), 4 * nextPages));
@@ -28,7 +24,6 @@ export default function Talent_list(props) {
 
     // console.log(pageNumber)
     // console.log(currentPages)
-
 
     // setCurrentPages(nextPages);
     // console.log(currentPages)
@@ -41,6 +36,15 @@ export default function Talent_list(props) {
     // }
     // console.log(pageNumber)
   };
+  const getData = async () => {
+    const req = await axios.get(
+      "https://dummy-peworld.vercel.app/api/dataTalent"
+    );
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <Navbar />
@@ -101,7 +105,9 @@ export default function Talent_list(props) {
                     : "text-[black] bg-[white]"
                 }`}
               >
-                <span>{increment} <p className="hidden">{item}</p></span>
+                <span>
+                  {increment} <p className="hidden">{item}</p>
+                </span>
               </button>
             );
           })}
@@ -116,9 +122,11 @@ export default function Talent_list(props) {
   );
 }
 
-export async function getServerSideProps() {
-  const req = await axios.get("https://dummy-peworld.vercel.app/api/dataTalent");
-  return {
-    props: req.data,
-  };
-}
+// export async function getServerSideProps() {
+//   const req = await axios.get(
+//     "https://dummy-peworld.vercel.app/api/dataTalent"
+//   );
+//   return {
+//     props: req.data,
+//   };
+// }
