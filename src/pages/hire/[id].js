@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../Component/navbar";
-import Footer from "../Component/footer";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 import axios from "axios";
 import Link from "next/link";
 import { getCookie } from "cookies-next";
