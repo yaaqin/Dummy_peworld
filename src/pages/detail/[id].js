@@ -39,7 +39,7 @@ function Detail(props) {
             {/* {user ? ( */}
               <div>
                 <button
-                  onClick={() => router.push(`/hiring/${Data?.id}`)}
+                  onClick={() => router.push(`/hire/${Data?.id}`)}
                   className="hover:scale-[1.03] py-[5px] px-[55px] bg-[#5E50A1] text-[25px] text-[white] rounded-xl"
                 >
                   Hire
