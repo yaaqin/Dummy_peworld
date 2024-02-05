@@ -17,7 +17,7 @@ function Login() {
     setErrMsg(null);
 
     axios
-      .post("https://hire-job.onrender.com/v1/auth/login", {
+      .post("https://peworld-hiring-web-be.cyclic.app/v1/auth/login", {
         email: email,
         password: password,
       })

@@ -21,7 +21,7 @@ function Hiring(props) {
 
     axios
       .post(
-        "https://hire-job.onrender.com/v1/contact",
+        "https://peworld-hiring-web-be.cyclic.app/v1/contact",
         {
           subject: subject,
           description: desk,
